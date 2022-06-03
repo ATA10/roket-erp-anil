@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./stok.js"></script>
+</head>
+
+<body>
+    <form id="stokdus-formu">
+        <fieldset>
+            <legend>Stok Ürünü Düş:</legend>
+            <input type="submit" value="Değerleri Çek" id="cek">
+            <hr>            
+            <input type="number" placeholder="Miktar" id="dusulecek">
+            <hr>
+            <input type="text" placeholder="Stok_cikan" id="Stok_cikan">
+            <hr>
+            <textarea name="aciklama" id="aciklama" cols="30" rows="10">
+            </textarea>
+            <hr>
+            <input type="submit" id="kaydet" value="Kaydet">            
+            <input type="submit" id="geri" value="Geri">
+        </fieldset>
+    </form>
+    <script>
+        document.getElementById("cek").addEventListener("click", (event) => {
+            event.preventDefault();
+            stokDusmeSayfasi();
+        })
+        
+        document.getElementById("geri").addEventListener("click", (event) => {
+            event.preventDefault();
+            location.href = "./stoklistele.html"
+        })        
+    </script>
+</body>
+
+</html>
