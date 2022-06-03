@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Takip Yönetimi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="./stok.js"></script>
+    <script src="./stokEkle.js"></script>
+    <script src="./stoklistele.js"></script>
+</head>
+
+<body>
+    <input type="submit" id="stokEkle" value="Stok Ekle">
+    <table id="table" border="1px" style="border-collapse:collapse;">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Birim</th>
+            <th>miktar</th>
+            <th>Stok giriş tarihi</th>
+            <th>stok çıkış tarih</th>
+            <th>stok ekleyen</th>
+            <th>stok çıkaran</th>
+            <th>Açıklama</th>
+            <th>Sil</th>
+        </tr>
+        <script>
+            stokListele();
+        </script>
+    </table>
+    <script>
+        document.getElementById("stokEkle").addEventListener("click", () => {
+            event.preventDefault();
+            location.href = "./stokEkle.html";
+        })
+        document.getElementById("stokListele").addEventListener("click", () => {
+            event.preventDefault();
+            location.href = "./stokListele.html";
+        })
+    </script>
+
+</body>
+
+</html>
